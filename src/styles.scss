@@ -1,0 +1,6 @@
+@import '~blueprint-css/src/blueprint';
+
+@include column-generator('sm', '.ngx-eq-sm');
+@include column-generator('md', '.ngx-eq-md');
+@include column-generator('lg', '.ngx-eq-lg');
+@include column-generator('xl', '.ngx-eq-xl');

@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { NgxEqModule } from './modules/ngx-eq/ngx-eq.module';
 import { AppComponent } from './app.component';
-
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxEqModule
   ],
   providers: [],
   bootstrap: [AppComponent]
