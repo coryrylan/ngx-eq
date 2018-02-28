@@ -1,6 +1,10 @@
-@import '~blueprint-css/src/blueprint';
+@import "~blueprint-css/src/blueprint";
 
-@include column-generator('sm', '.ngx-eq-sm');
-@include column-generator('md', '.ngx-eq-md');
-@include column-generator('lg', '.ngx-eq-lg');
-@include column-generator('xl', '.ngx-eq-xl');
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+main {
+  padding: 12px;
+}

@@ -1,27 +1,83 @@
-# NgxEq
+# NGX-EQ
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+NGX-EQ is an Angular Directive that makes it easier to allow
+components to be responsive to their parent element size.
+CSS Media Queries fall short when it comes to reusable components,
+as they measure screen size and not the size context of the element.
 
-## Development server
+NGX-EQ uses the Resize Observer API to efficiently add special
+CSS class hooks to style your component based on the current
+size of the component.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### [Demo](https://stackblitz.com/edit/angular-fgjuh8)
 
-## Code scaffolding
+## Example
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```html
+<my-component ngxEQ></my-component
+```
 
-## Build
+```css
+:host {
+  padding: 12px;
+  margin-bottom: 12px;
+  color: #fff;
+  background-color: #4A4A4A;
+  display: block;
+}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+:host.ngx-eq-sm {
+  background-color: #FF353B;
+}
 
-## Running unit tests
+:host.ngx-eq-md {
+  background-color: #3F49E8;
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+:host.ngx-eq-lg {
+  background-color: #48B04D;
+}
+  
+:host.ngx-eq-xl {
+  background-color: #E8BE0C;
+}
+```
 
-## Running end-to-end tests
+## Instalation
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+`npm install ngx-eq --save`
 
-## Further help
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+import { NgxEqModule } from './modules/ngx-eq/ngx-eq.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    NgxEqModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+## Configuration
+
+The Element Query breakpoints can be customized.
+
+```typescript
+NgxEqModule.forRoot({
+  // default values
+  small: 480,
+  medium: 720,
+  large: 960,
+  extraLarge: 1440
+})
+```

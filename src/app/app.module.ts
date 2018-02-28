@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxEqModule } from './modules/ngx-eq/ngx-eq.module';
+import { NgxEqModule } from './../../lib/ngx-eq.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NgxEqModule
+    NgxEqModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

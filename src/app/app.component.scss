@@ -1,6 +1,6 @@
 .test-row {
   padding: 12px;
-  margin: 12px;
+  margin-bottom: 12px;
   color: #fff;
   background-color: #4A4A4A;
   display: block;
@@ -14,11 +14,11 @@
   }
 
   &.ngx-eq-lg {
-    background-color: #E8BE0C;
-  }
-
-  &.ngx-eq-xl {
     background-color: #48B04D;
+  }
+  
+  &.ngx-eq-xl {
+    background-color: #E8BE0C;
   }
 }
 

@@ -1,0 +1,21 @@
+{
+  "name": "ngx-eq",
+  "version": "0.0.3",
+  "repository": "https://github.com/coryrylan/ngx-eq",
+  "author": "Cory Rylan",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "resize-observer-polyfill": "^1.5.0"
+  },
+  "main": "bundles/ngx-eq.umd.js",
+  "module": "esm5/ngx-eq.js",
+  "es2015": "esm2015/ngx-eq.js",
+  "typings": "ngx-eq.d.ts",
+  "metadata": "ngx-eq.metadata.json",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}
