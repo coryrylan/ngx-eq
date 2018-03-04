@@ -50,8 +50,8 @@ size of the component.
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxEqModule } from 'ngx-eq';
 
-import { NgxEqModule } from './modules/ngx-eq/ngx-eq.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
