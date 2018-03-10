@@ -1,4 +1,6 @@
-# NGX-EQ
+## This project has moved and can now be found [here](https://github.com/coryrylan/ngx-libraries).
+
+## NGX-EQ
 
 NGX-EQ is an Angular Directive that makes it easier to allow
 components to be responsive to their parent element size.
